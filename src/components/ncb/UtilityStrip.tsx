@@ -52,6 +52,19 @@ export function UtilityStrip() {
             </button>
           </div>
           <span className="opacity-30" aria-hidden>|</span>
+          <div role="group" aria-label="Theme" className="flex items-center gap-1.5">
+            <button 
+              onClick={() => a11y.setTheme(null)} 
+              aria-label="Default Theme" 
+              className={`size-4 rounded-full border border-white/20 bg-black transition-transform hover:scale-110 ${!a11y.theme ? "ring-1 ring-saffron ring-offset-1 ring-offset-black" : ""}`}
+            />
+            <button 
+              onClick={() => a11y.setTheme("theme-ocean")} 
+              aria-label="Ocean Theme" 
+              className={`size-4 rounded-full border border-white/20 bg-[#042b4c] transition-transform hover:scale-110 ${a11y.theme === "theme-ocean" ? "ring-1 ring-[#ffe600] ring-offset-1 ring-offset-black" : ""}`}
+            />
+          </div>
+          <span className="opacity-30" aria-hidden>|</span>
           <a href="#" className="inline-flex items-center gap-1 hover:underline">
             <User className="size-3.5" aria-hidden /> Login
           </a>
