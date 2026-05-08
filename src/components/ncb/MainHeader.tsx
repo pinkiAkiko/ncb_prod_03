@@ -2,7 +2,8 @@ import { Menu, Search, ShieldAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from "@/components/ui/sheet";
-import ncbEmblem from "@/assets/logos/emblum.jpg";
+import stateEmblem from "@/assets/logos/emblum.jpg";
+import ncbLogo from "@/assets/ncb-emblem.png";
 import manasLogo from "@/assets/manas-logo.png";
 import mhaLogo from "@/assets/logos/mha.png";
 
@@ -89,7 +90,7 @@ export function MainHeader() {
     <header className="bg-card border-b border-border sticky top-0 z-40 shadow-sm">
       <div className="mx-auto max-w-7xl px-4 py-3 flex items-center gap-4">
         <div className="flex items-center gap-3 shrink-0">
-          <img src={mhaLogo} alt="Government of India - Ministry of Home Affairs" className="h-14 sm:h-16 w-auto dark:brightness-0 dark:invert" />
+          <img src={stateEmblem} alt="Government of India - Ministry of Home Affairs" className="h-14 sm:h-16 w-auto dark:brightness-0 dark:invert" />
         </div>
 
         <div className="min-w-0 flex-1">
@@ -117,7 +118,7 @@ export function MainHeader() {
           </Button>
           <div className="flex items-center gap-4 border-l border-border/60 pl-4 ml-2">
             <img src={manasLogo} alt="MANAS National Narcotics Helpline" className="h-11 w-auto shrink-0 dark:brightness-0 dark:invert" />
-            <img src={ncbEmblem} alt="Narcotics Control Bureau emblem" className="h-16 sm:h-18 w-auto shrink-0" />
+            <img src={ncbLogo} alt="Narcotics Control Bureau Logo" className="h-16 sm:h-18 w-auto shrink-0 dark:brightness-0 dark:invert" />
           </div>
         </div>
 
@@ -172,7 +173,7 @@ export function MainHeader() {
         </Sheet>
       </div>
 
-      <nav aria-label="Primary" className="hidden md:block bg-strip text-strip-foreground border-t border-white/5 shadow-md">
+      <nav aria-label="Primary" className="hidden md:block bg-strip text-strip-foreground border-t border-foreground/15 shadow-md">
         <div className="mx-auto max-w-7xl">
           <ul className="flex items-center justify-start">
             {navigationData.map((item, idx) => (

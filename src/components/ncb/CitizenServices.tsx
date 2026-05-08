@@ -26,12 +26,11 @@ export function CitizenServices() {
   const { ref, isRevealed } = useScrollReveal();
 
   return (
-    <section 
+    <section
       ref={ref}
-      aria-labelledby="citizen-title" 
-      className={`bg-saffron-tint py-16 border-y border-border transition-all duration-1000 ease-out transform ${
-        isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-      }`}
+      aria-labelledby="citizen-title"
+      className={`bg-saffron-tint py-16 border-y border-border transition-all duration-1000 ease-out transform ${isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+        }`}
     >
       <div className="mx-auto max-w-7xl px-4">
         <div className="bg-card border-l-4 border-saffron shadow-sm p-6 md:p-8 grid md:grid-cols-[auto_1fr_auto] gap-6 items-center">

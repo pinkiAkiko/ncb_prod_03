@@ -79,9 +79,9 @@ export function UpdatesAndEvents() {
               
               return (
                 <TabsContent key={t} value={t} className="mt-2">
-                  <div className="bg-card border-t border-border relative overflow-hidden h-[300px] group">
+                  <div className="bg-card border-t border-border relative overflow-hidden h-[300px] hover:[&>.auto-scroll-container]:[animation-play-state:paused]">
                     {scrollItems.length > 0 ? (
-                      <div className="absolute inset-x-0 top-0 auto-scroll-container group-hover:[animation-play-state:paused]">
+                      <div className="absolute inset-x-0 top-0 auto-scroll-container">
                         {scrollItems.map((it, i) => (
                           <article key={i} className="py-4 border-b border-border/60 last:border-b-0 hover:bg-muted/50 transition-colors px-2 rounded-sm group">
                             <div className="flex items-center gap-2 flex-wrap">

@@ -89,14 +89,14 @@
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.99 0.002 250);
 
-  --border: oklch(0.2 0.02 260);
-  --input: oklch(0.2 0.02 260);
+  --border: oklch(0.35 0.01 260);
+  --input: oklch(0.35 0.01 260);
   --ring: oklch(0.72 0.16 60);
 
   /* NCB brand tokens - Dark Mode Adjusted */
   --navy: oklch(0.98 0.01 260); 
   --navy-deep: oklch(0.05 0.01 260);
-  --navy-foreground: oklch(0.98 0.01 260);
+  --navy-foreground: oklch(0.1 0.02 260);
   --saffron: oklch(0.72 0.16 60);
   --saffron-foreground: oklch(0.1 0.01 260);
   --india-green: oklch(0.5 0.12 150);
@@ -115,7 +115,7 @@
   --sidebar-primary-foreground: oklch(0.1 0.01 260);
   --sidebar-accent: oklch(0.2 0.04 260);
   --sidebar-accent-foreground: oklch(0.98 0.01 260);
-  --sidebar-border: oklch(0.2 0.02 260);
+  --sidebar-border: oklch(0.35 0.01 260);
   --sidebar-ring: oklch(0.72 0.16 60);
 
   /* Utilities */

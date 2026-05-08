@@ -53,7 +53,7 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-title"
-      className="relative bg-navy-deep text-navy-foreground overflow-hidden"
+      className="relative bg-navy-deep text-foreground overflow-hidden"
     >
       {/* Invisible spacer image to force the container to exactly match the banner's intrinsic aspect ratio */}
       <img 
@@ -102,10 +102,10 @@ export function Hero() {
                   <h1 id="hero-title" className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">
                     {slide.title}
                   </h1>
-                  <p className="mt-3 text-sm sm:text-base md:text-lg text-navy-foreground opacity-80 font-medium">
+                  <p className="mt-3 text-sm sm:text-base md:text-lg text-foreground opacity-80 font-medium">
                     {slide.subtitle}
                   </p>
-                  <p className="mt-4 sm:mt-5 text-sm md:text-base text-navy-foreground opacity-85 max-w-xl leading-relaxed">
+                  <p className="mt-4 sm:mt-5 text-sm md:text-base text-foreground opacity-85 max-w-xl leading-relaxed">
                     {slide.desc}
                   </p>
                 </div>
@@ -118,7 +118,7 @@ export function Hero() {
             </Button>
             <Button
               variant="outline"
-              className="border-navy-foreground/40 bg-transparent text-navy-foreground hover:bg-navy-foreground/10 rounded-none h-11 px-6 transition-colors duration-300"
+              className="border-border/40 bg-transparent text-foreground hover:bg-foreground/10 rounded-none h-11 px-6 transition-colors duration-300"
               asChild
             >
               <a href="tel:1933">
@@ -127,7 +127,7 @@ export function Hero() {
             </Button>
             <Button
               variant="ghost"
-              className="text-navy-foreground hover:bg-navy-foreground/10 rounded-none h-11 px-4 transition-colors duration-300 group"
+              className="text-foreground hover:bg-foreground/10 rounded-none h-11 px-4 transition-colors duration-300 group"
             >
               Learn About NCB <ArrowRight className="size-4 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -139,7 +139,7 @@ export function Hero() {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`h-1.5 transition-all duration-500 rounded-full ${
-                  index === currentSlide ? "w-8 bg-saffron" : "w-2 bg-navy-foreground/30 hover:bg-navy-foreground/50"
+                  index === currentSlide ? "w-8 bg-saffron" : "w-2 bg-foreground/30 hover:bg-foreground/50"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -149,13 +149,13 @@ export function Hero() {
       </div>
     </div>
 
-      <div className="relative z-20 bg-strip border-t border-navy-foreground/10">
+      <div className="relative z-20 bg-strip border-t border-foreground/15">
         <div className="mx-auto max-w-7xl px-4 py-3 flex items-center gap-3">
           <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-saffron shrink-0">
             <Megaphone className="size-4" aria-hidden /> Latest Updates
           </span>
           <div className="flex-1 overflow-hidden relative group cursor-pointer">
-            <div className="ticker-track flex gap-10 whitespace-nowrap text-sm text-navy-foreground opacity-90 group-hover:[animation-play-state:paused]">
+            <div className="ticker-track flex gap-10 whitespace-nowrap text-sm text-foreground opacity-90 group-hover:[animation-play-state:paused]">
               {[...updates, ...updates].map((u, i) => (
                 <span key={i} className="inline-flex items-center gap-2">
                   <span className="size-1 bg-saffron" /> {u}

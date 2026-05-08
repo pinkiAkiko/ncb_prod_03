@@ -72,7 +72,7 @@ export function MediaAndSocial() {
               </TabsContent>
             ))}
           </Tabs>
-          <Button variant="outline" className="mt-5 border-navy text-navy hover:bg-navy hover:text-navy-foreground rounded-none transition-all duration-300">
+          <Button variant="outline" className="mt-5 border-navy text-navy hover:bg-navy hover:text-foreground rounded-none transition-all duration-300">
             View Gallery <ArrowRight className="size-4 ml-2" />
           </Button>
         </div>
@@ -92,7 +92,7 @@ export function MediaAndSocial() {
                   <a
                     href="#"
                     aria-label={`NCB on ${label}`}
-                    className="flex items-center gap-3 px-3 py-3 border border-border hover:bg-navy hover:text-navy-foreground transition-colors group"
+                    className="flex items-center gap-3 px-3 py-3 border border-border hover:bg-navy hover:text-foreground transition-colors group"
                   >
                     <Icon className="size-5 group-hover:scale-110 transition-transform" aria-hidden />
                     <span className="text-sm font-medium">{label}</span>

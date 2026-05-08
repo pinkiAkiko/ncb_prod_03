@@ -1,4 +1,5 @@
-import ncbEmblem from "@/assets/logos/emblum.jpg";
+import stateEmblem from "@/assets/logos/emblum.jpg";
+import ncbLogo from "@/assets/ncb-emblem.png";
 
 const cols = [
   { title: "About NCB", items: ["Who We Are", "Origin & Evolution", "Mission, Vision & Motto", "Hierarchy & Structure", "Our Offices", "Our Partners"] },
@@ -11,14 +12,15 @@ const bottomLinks = ["Website Policies", "Privacy Policy", "Accessibility Statem
 
 export function SiteFooter() {
   return (
-    <footer className="bg-navy-deep text-navy-foreground" aria-labelledby="footer-title">
+    <footer className="bg-navy-deep text-foreground" aria-labelledby="footer-title">
       <h2 id="footer-title" className="sr-only">Site footer</h2>
 
-      <div className="mx-auto max-w-7xl px-4 pt-12 pb-8 flex items-center gap-4 border-b border-navy-foreground/10">
-        <img src={ncbEmblem} alt="" className="h-14 w-auto" />
+      <div className="mx-auto max-w-7xl px-4 pt-12 pb-8 flex items-center gap-6 border-b border-border/40">
+        <img src={stateEmblem} alt="State Emblem of India" className="h-14 w-auto" />
+        <img src={ncbLogo} alt="NCB Logo" className="h-14 w-auto" />
         <div>
           <p className="text-base font-bold">Narcotics Control Bureau</p>
-          <p className="text-xs text-navy-foreground opacity-70">Ministry of Home Affairs, Government of India</p>
+          <p className="text-xs text-foreground opacity-70">Ministry of Home Affairs, Government of India</p>
         </div>
       </div>
 
@@ -29,7 +31,7 @@ export function SiteFooter() {
             <ul className="mt-3 space-y-2">
               {c.items.map((it) => (
                 <li key={it}>
-                  <a href="#" className="text-sm text-navy-foreground opacity-80 hover:text-navy-foreground hover:underline">
+                  <a href="#" className="text-sm text-foreground opacity-80 hover:text-foreground hover:underline">
                     {it}
                   </a>
                 </li>
@@ -39,18 +41,18 @@ export function SiteFooter() {
         ))}
         <div className="col-span-2 md:col-span-3 lg:col-span-1">
           <h3 className="text-sm font-bold uppercase tracking-wider text-saffron">Contact</h3>
-          <address className="mt-3 not-italic text-sm text-navy-foreground opacity-80 space-y-1.5">
+          <address className="mt-3 not-italic text-sm text-foreground opacity-80 space-y-1.5">
             <p>Address Placeholder, New Delhi, India</p>
             <p>Phone: Placeholder</p>
             <p>MANAS Helpline: <a href="tel:1933" className="font-semibold text-saffron">1933</a></p>
-            <p>Email: <span className="text-navy-foreground opacity-70">placeholder@ncb.gov.in</span></p>
+            <p>Email: <span className="text-foreground opacity-70">placeholder@ncb.gov.in</span></p>
             <p><a href="#" className="hover:underline">Office Locator →</a></p>
           </address>
         </div>
       </div>
 
-      <div className="border-t border-navy-foreground/10">
-        <div className="mx-auto max-w-7xl px-4 py-5 flex flex-wrap items-center justify-between gap-4 text-xs text-navy-foreground opacity-75">
+      <div className="border-t border-border/40">
+        <div className="mx-auto max-w-7xl px-4 py-5 flex flex-wrap items-center justify-between gap-4 text-xs text-foreground opacity-75">
           <ul className="flex flex-wrap gap-x-4 gap-y-2">
             {bottomLinks.map((l) => (
               <li key={l}><a href="#" className="hover:underline">{l}</a></li>
@@ -58,7 +60,7 @@ export function SiteFooter() {
           </ul>
           <div className="flex flex-wrap gap-x-4 gap-y-1">
             <span>Last Updated: 07 May 2026</span>
-            <span>Visitors: <span className="font-semibold text-navy-foreground">CMS Placeholder</span></span>
+            <span>Visitors: <span className="font-semibold text-foreground">CMS Placeholder</span></span>
           </div>
         </div>
         <div className="bg-strip">

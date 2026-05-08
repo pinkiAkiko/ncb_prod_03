@@ -85,7 +85,7 @@ export function ImportantSitesAndSubscribe() {
               type="email"
               required
               placeholder="Email address"
-              className="bg-white text-foreground rounded-none h-10 border-transparent focus-visible:ring-saffron"
+              className="bg-white text-navy-deep rounded-none h-10 border-transparent focus-visible:ring-saffron"
             />
             <div className="flex items-start gap-2">
               <Checkbox id="consent" className="mt-0.5 border-navy-foreground data-[state=checked]:bg-saffron data-[state=checked]:text-saffron-foreground rounded-none" />
