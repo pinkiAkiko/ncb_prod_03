@@ -23,24 +23,33 @@ function AppInner() {
   const [loading, setLoading] = useState(true);
   const { showModal } = useLanguage();
 
+  if (loading) {
+    return <LogoLoader onFadeOut={() => setLoading(false)} />;
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {loading && <LogoLoader onFadeOut={() => setLoading(false)} />}
-      {!loading && showModal && <LanguageModal />}
-      <a href="#main-content" className="skip-link">Skip to main content</a>
-      <UtilityStrip />
-      <MainHeader />
-      <main id="main-content" className="flex-1">
-        <Hero />
-        <Reveal><AboutAndMVM /></Reveal>
-        <Reveal><DirectorMessage /></Reveal>
-        <Reveal><UpdatesAndEvents /></Reveal>
-        <Reveal><CitizenServices /></Reveal>
-        <Reveal><EnforcementAndWanted /></Reveal>
-        <Reveal><MediaAndSocial /></Reveal>
-        <Reveal><ImportantSitesAndSubscribe /></Reveal>
-      </main>
-      <SiteFooter />
+      {/* Language Modal Overlay */}
+      {showModal && <LanguageModal />}
+      
+      {/* Home Screen Content - Blurred when modal is open */}
+      <div className={`flex-1 flex flex-col transition-all duration-500 ${showModal ? "blur-[6px] scale-[0.98] pointer-events-none select-none" : "blur-0 scale-100"}`}>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
+        <UtilityStrip />
+        <MainHeader />
+        <main id="main-content" className="flex-1">
+          <Hero />
+          <Reveal><AboutAndMVM /></Reveal>
+          <Reveal><DirectorMessage /></Reveal>
+          <Reveal><UpdatesAndEvents /></Reveal>
+          <Reveal><CitizenServices /></Reveal>
+          <Reveal><EnforcementAndWanted /></Reveal>
+          <Reveal><MediaAndSocial /></Reveal>
+          <Reveal><ImportantSitesAndSubscribe /></Reveal>
+        </main>
+        <SiteFooter />
+      </div>
+
       <Toaster position="top-right" />
     </div>
   );
